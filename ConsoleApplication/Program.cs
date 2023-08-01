@@ -6,7 +6,8 @@ namespace ConsoleApplication
     {
         static void Main()
         {
-            var calculator = LoadFrom("MyLibrary.dll", "MyLibrary.Calculator");
+            var pathToLibrary = "C:\\Users\\Alice White\\source\\repos\\Net12-onl\\MyLibrary\\MyLibrary\\bin\\Debug\\net6.0\\MyLibrary.dll";
+            var calculator = LoadFrom(pathToLibrary, "MyLibrary.Calculator");
             var methodInfo = calculator.GetMethod("Add");
             double result = (double)methodInfo.Invoke(null, new object[] { 3,4 }) ;
 
